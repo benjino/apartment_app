@@ -1,0 +1,58 @@
+<p id="notice"><%= notice %></p>
+<!--This listed apartment will appear in Googlemaps  -->
+<div id="apartment_map" data-apartment-id="<%=@apartment.id%>">Google Map should be here...</div>
+
+<%= link_to image_tag(@apartment.image.url(:large)), @apartment.image.url %>
+<p>
+  <strong>Name:</strong>
+  <%= @apartment.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @apartment.description %>
+</p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @apartment.phone_number %>
+</p>
+
+<p>
+  <strong>Hours to contact:</strong>
+  <%= @apartment.hours_to_contact %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @apartment.street1 %>
+</p>
+
+<p>
+  <strong>Unit#:</strong>
+  <%= @apartment.street2 %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @apartment.city %>
+</p>
+
+<p>
+  <strong>Postalcode:</strong>
+  <%= @apartment.postalcode %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @apartment.state %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @apartment.country %>
+</p>
+<% if user_signed_in? && @apartment.user_id == current_user.id %>
+  <%= link_to 'Edit', edit_apartment_path(@apartment) %> |
+<% end %>
+<%= link_to 'Back', apartments_path %>

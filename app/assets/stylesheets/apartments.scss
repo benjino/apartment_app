@@ -1,0 +1,36 @@
+// Place all the styles related to the Apartments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+table {
+  border-collapse: collapse;
+  border: 1px solid #425ff4;
+  th {
+    background-color: #425ff4;
+    color: #fff;
+    text-align: left;
+  }
+  th, td {
+    padding: 10px 20px;
+  }
+  tr:nth-child(even) {
+    background-color: #cccccc;
+  }
+}
+
+hr {
+  margin: 40px 0;
+}
+
+.pipe {
+  
+}
+
+#apartment_map, #index_map {
+  height: 400px;
+  width: 500px;
+  margin: 20px 0;
+}
+
+.user_img {
+  margin: 10px 0;
+}
